@@ -143,9 +143,7 @@ name | block | weight | loading | communality | redundancy |
 plot(Q_pls, what = "loadings")
 ```
 
-<a href="#">
-    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_10_0.png" alt="Post Sample Image">
-</a>
+[![Post Sample Image]({{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_10_0.png)]
 
 ```R
 # Another measure of block construction is the "crossloadings". 
