@@ -52,7 +52,6 @@ innerplot(Q_inner)
 <a href="#">
     <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
 </a>
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
 
 ```R
 ### Set the outer model
@@ -155,10 +154,9 @@ Q_pls$outer
 plot(Q_pls, what = "loadings")
 ```
 
-
-![png](PLS-Path-Modelling-Tutorial-Figures/output_10_0.png)
-
-
+<a href="#">
+    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_10_0.png" alt="Post Sample Image">
+</a>
 
 ```R
 # Another measure of block construction is the "crossloadings". 
@@ -559,10 +557,9 @@ for (j in 1:7) {
 par(op)
 ```
 
-
-![png](PLS-Path-Modelling-Tutorial-Figures/output_16_0.png)
-
-
+<a href="#">
+    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_16_0.png" alt="Post Sample Image">
+</a>
 
 ```R
 # Pairs plot
@@ -579,10 +576,9 @@ panel.cor <- function(x, y, digits=2, prefix="", cex.cor, ...)
 pairs(Scores, pch = 16, col = "blue", panel=panel.smooth, upper.panel=panel.cor)
 ```
 
-
-![png](PLS-Path-Modelling-Tutorial-Figures/output_17_0.png)
-
-
+<a href="#">
+    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_17_0.png" alt="Post Sample Image">
+</a>
 
 ```R
 ### Predict Richness!
@@ -707,9 +703,9 @@ text(x=pusr[1]+0.02*(pusr[2]-pusr[1]), y=pusr[4]-0.02*(pusr[4]-pusr[3]), txt, ad
 
 ```
 
-
-![png](PLS-Path-Modelling-Tutorial-Figures/output_24_0.png)
-
+<a href="#">
+    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_24_0.png" alt="Post Sample Image">
+</a>
 
 
 ```R
@@ -763,5 +759,6 @@ text(0.75,0.93, "Godness-of-Fit = 0.820", cex=1, col="red")
 text(0.45,0.06,substitute(R^2 == "0.819*"), col="white", cex=1)
 ```
 
-
-![png](PLS-Path-Modelling-Tutorial-Figures/output_26_0.png)
+<a href="#">
+    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_26_0.png" alt="Post Sample Image">
+</a>
