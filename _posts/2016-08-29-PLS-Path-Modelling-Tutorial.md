@@ -47,7 +47,7 @@ innerplot(Q_inner)
 ```
 
 
-![png](output_4_0.png)
+![png](PLS-Path-Modelling-Tutorial-Figures/output_4_0.png)
 
 
 
