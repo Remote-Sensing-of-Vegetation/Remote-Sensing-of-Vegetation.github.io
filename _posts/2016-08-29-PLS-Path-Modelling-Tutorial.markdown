@@ -4,7 +4,7 @@ title:      "PLS Path Modeling"
 subtitle:   "Path analysis to model Remote Sensing data"
 date:       2016-08-29 12:00:00
 author:     "Javier Lopatin"
-header-img: "_posts/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
+header-img: "/_posts/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
 ---
 
 
@@ -52,7 +52,6 @@ innerplot(Q_inner)
 <a href="#">
     <img src="{{ site.baseurl }}/_posts/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
 </a>
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
 
 ```R
 ### Set the outer model
