@@ -49,7 +49,9 @@ colnames(Q_inner) = rownames(Q_inner)
 innerplot(Q_inner)
 ```
 
-
+<a href="#">
+<img src="{{ site.baseurl }}PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
+</a>
 ![png](PLS-Path-Modelling-Tutorial-Figures/output_4_0.png)
 
 
