@@ -4,7 +4,7 @@ title:      "PLS Path Modeling"
 subtitle:   "Path analysis to model Remote Sensing data"
 date:       2016-08-29 12:00:00
 author:     "Javier Lopatin"
-header-img: "/_posts/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
+header-img: "img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
 ---
 
 
