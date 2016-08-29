@@ -50,7 +50,7 @@ innerplot(Q_inner)
 ```
 
 <a href="#">
-    <img src="{{ site.baseurl }}/_posts/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
+    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
 </a>
 
 ```R
