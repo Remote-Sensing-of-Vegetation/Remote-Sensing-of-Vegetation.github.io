@@ -79,21 +79,159 @@ Q_pls = plspm(datapls, Q_inner, Q_outer, Q_modes, maxiter= 1000, boot.val = F,
 Q_pls$unidim
 ```
 
-
 <table>
-<thead><tr><th></th><th scope=col>Mode</th><th scope=col>MVs</th><th scope=col>C.alpha</th><th scope=col>DG.rho</th><th scope=col>eig.1st</th><th scope=col>eig.2nd</th></tr></thead>
+
+<thead>
+
+<tr>
+
+<th scope="col">Mode</th>
+
+<th scope="col">MVs</th>
+
+<th scope="col">C.alpha</th>
+
+<th scope="col">DG.rho</th>
+
+<th scope="col">eig.1st</th>
+
+<th scope="col">eig.2nd</th>
+
+</tr>
+
+</thead>
+
 <tbody>
-	<tr><th scope=row>Hieght.Canopies</th><td>A                </td><td>4                </td><td>0.846691847864926</td><td>0.898541284976128</td><td>2.76660593039423 </td><td>0.848970661259768</td></tr>
-	<tr><th scope=row>Midle1.Canopies</th><td>A                </td><td>3                </td><td>0.832649280723446</td><td>0.902890955686392</td><td>2.27622104645669 </td><td>0.703391587881361</td></tr>
-	<tr><th scope=row>Midle2.Canopies</th><td>A                </td><td>3                </td><td>0                </td><td>0.282623863915595</td><td>1.7994571554243  </td><td>1.16646325558366 </td></tr>
-	<tr><th scope=row>Low.Canopies</th><td>A                </td><td>4                </td><td>0.583217363882368</td><td>0.549549877784367</td><td>1.9039716970801  </td><td>1.80619452395328 </td></tr>
-	<tr><th scope=row>OBIA</th><td>A                </td><td>16               </td><td>0                </td><td>0.134346140387168</td><td>6.78169811420588 </td><td>3.03926457205021 </td></tr>
-	<tr><th scope=row>Topography</th><td>A                </td><td>3                </td><td>0                </td><td>0.135732552235257</td><td>1.31878839969304 </td><td>0.917497083954768</td></tr>
-	<tr><th scope=row>Richness</th><td>A                </td><td>3                </td><td>0.823262974611027</td><td>0.894912864943492</td><td>2.21931450180523 </td><td>0.495174584199028</td></tr>
+
+<tr>
+
+<th scope="row">Hieght.Canopies</th>
+
+<td>A</td>
+
+<td>4</td>
+
+<td>0.846691847864926</td>
+
+<td>0.898541284976128</td>
+
+<td>2.76660593039423</td>
+
+<td>0.848970661259768</td>
+
+</tr>
+
+<tr>
+
+<th scope="row">Midle1.Canopies</th>
+
+<td>A</td>
+
+<td>3</td>
+
+<td>0.832649280723446</td>
+
+<td>0.902890955686392</td>
+
+<td>2.27622104645669</td>
+
+<td>0.703391587881361</td>
+
+</tr>
+
+<tr>
+
+<th scope="row">Midle2.Canopies</th>
+
+<td>A</td>
+
+<td>3</td>
+
+<td>0</td>
+
+<td>0.282623863915595</td>
+
+<td>1.7994571554243</td>
+
+<td>1.16646325558366</td>
+
+</tr>
+
+<tr>
+
+<th scope="row">Low.Canopies</th>
+
+<td>A</td>
+
+<td>4</td>
+
+<td>0.583217363882368</td>
+
+<td>0.549549877784367</td>
+
+<td>1.9039716970801</td>
+
+<td>1.80619452395328</td>
+
+</tr>
+
+<tr>
+
+<th scope="row">OBIA</th>
+
+<td>A</td>
+
+<td>16</td>
+
+<td>0</td>
+
+<td>0.134346140387168</td>
+
+<td>6.78169811420588</td>
+
+<td>3.03926457205021</td>
+
+</tr>
+
+<tr>
+
+<th scope="row">Topography</th>
+
+<td>A</td>
+
+<td>3</td>
+
+<td>0</td>
+
+<td>0.135732552235257</td>
+
+<td>1.31878839969304</td>
+
+<td>0.917497083954768</td>
+
+</tr>
+
+<tr>
+
+<th scope="row">Richness</th>
+
+<td>A</td>
+
+<td>3</td>
+
+<td>0.823262974611027</td>
+
+<td>0.894912864943492</td>
+
+<td>2.21931450180523</td>
+
+<td>0.495174584199028</td>
+
+</tr>
+
 </tbody>
+
 </table>
-
-
 
 
 ```R
