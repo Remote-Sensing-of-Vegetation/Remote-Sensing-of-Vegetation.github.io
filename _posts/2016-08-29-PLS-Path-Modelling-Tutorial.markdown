@@ -50,8 +50,9 @@ innerplot(Q_inner)
 ```
 
 <a href="#">
-<img src="{{ site.baseurl }}PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
+    <img src="{{ site.baseurl }}/img/post-sample-image.jpg" alt="Post Sample Image">
 </a>
+<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
 
 ```R
 ### Set the outer model
