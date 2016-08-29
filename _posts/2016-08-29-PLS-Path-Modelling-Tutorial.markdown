@@ -51,6 +51,8 @@ colnames(Q_inner) = rownames(Q_inner)
 innerplot(Q_inner)
 ```
 
+![alt text](/img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png "Title")
+
 <a href="#">
     <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
 </a>
