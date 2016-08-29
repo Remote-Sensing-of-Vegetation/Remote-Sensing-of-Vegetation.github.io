@@ -1,11 +1,10 @@
-
 ---
 layout:     post
-title:      "PLS Path Modelling to predict species richness using LiDAR data"
-subtitle:   "Path analysis for Remote Sensing data"
-date:       2016-08-29 12:00:00
-author:     "Javier Lopatin"
-header-img: "_posts/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
+title:      "Science has not yet mastered prophecy"
+subtitle:   "We predict too much for the next year and yet far too little for the next ten."
+date:       2014-08-24 12:00:00
+author:     "Start Bootstrap"
+header-img: "img/drone.jpg"
 ---
 
 
