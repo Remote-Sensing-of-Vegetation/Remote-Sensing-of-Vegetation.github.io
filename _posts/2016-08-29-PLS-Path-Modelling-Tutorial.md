@@ -153,7 +153,7 @@ plot(Q_pls, what = "loadings")
 ```
 
 
-![png](output_10_0.png)
+![png](PLS-Path-Modelling-Tutorial-Figures/output_10_0.png)
 
 
 
@@ -557,7 +557,7 @@ par(op)
 ```
 
 
-![png](output_16_0.png)
+![png](PLS-Path-Modelling-Tutorial-Figures/output_16_0.png)
 
 
 
@@ -577,7 +577,7 @@ pairs(Scores, pch = 16, col = "blue", panel=panel.smooth, upper.panel=panel.cor)
 ```
 
 
-![png](output_17_0.png)
+![png](PLS-Path-Modelling-Tutorial-Figures/output_17_0.png)
 
 
 
@@ -705,7 +705,7 @@ text(x=pusr[1]+0.02*(pusr[2]-pusr[1]), y=pusr[4]-0.02*(pusr[4]-pusr[3]), txt, ad
 ```
 
 
-![png](output_24_0.png)
+![png](PLS-Path-Modelling-Tutorial-Figures/output_24_0.png)
 
 
 
@@ -761,5 +761,5 @@ text(0.45,0.06,substitute(R^2 == "0.819*"), col="white", cex=1)
 ```
 
 
-![png](output_26_0.png)
+![png](PLS-Path-Modelling-Tutorial-Figures/output_26_0.png)
 
