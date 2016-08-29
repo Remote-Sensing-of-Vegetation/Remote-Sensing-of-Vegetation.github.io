@@ -9,9 +9,7 @@ header-img: "img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
 
 This is a tutorial about PLS Path Modeling applied to Geocience. The sample data is part of the analysis of [THIS](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6990570)
 
-
-<p>This is a tutorial about PLS Path Modeling applied to Geocience. The sample data is part of the analysis of <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6990570">THIS</a> paper.</p> 
-<p>See more information on PLS-PM <a href="http://gastonsanchez.com/PLS_Path_Modeling_with_R.pdf">here</a>.</p>
+See more information on PLS-PM [HERE](http://gastonsanchez.com/PLS_Path_Modeling_with_R.pd).
 
 
 
