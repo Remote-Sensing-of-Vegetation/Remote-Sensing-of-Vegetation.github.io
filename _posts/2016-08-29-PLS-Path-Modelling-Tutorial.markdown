@@ -51,10 +51,6 @@ innerplot(Q_inner)
 
 ![alt text](/img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png "Title")
 
-<a href="#">
-    <img src="{{ site.baseurl }}/img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png" alt="Post Sample Image">
-</a>
-
 ```R
 ### Set the outer model
 # set the "Modes" of the relations: character vector indicating the type of measurement for each block.
