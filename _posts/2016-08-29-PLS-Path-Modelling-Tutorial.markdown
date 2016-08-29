@@ -556,14 +556,10 @@ pairs(Scores, pch = 16, col = "blue", panel=panel.smooth, upper.panel=panel.cor)
 
 ![alt text](/img/PLS-Path-Modelling-Tutorial-Figures/output_17_0.png)
 
-
-```R
 ### Predict Richness!
 # simulate the PLS-PM interactions. All variables are linear relationships. 
 # See: Lopatin, J., Galleguillos, M., Fassnacht, F. E., Ceballos, A., & HernÃ¡ndez, J. (2015). Using a Multistructural Object-Based LiDAR Approach to Estimate Vascular Plant Richness in Mediterranean Forests With Complex Structure. IEEE Geoscience and Remote Sensing Letters, 12(5), 1008â€“1012.
 # Create the outer model
-```
-
 
 ```R
 Q_pls$outer
