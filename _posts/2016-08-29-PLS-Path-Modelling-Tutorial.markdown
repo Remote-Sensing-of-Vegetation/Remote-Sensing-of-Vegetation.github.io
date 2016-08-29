@@ -96,48 +96,44 @@ Q_pls$unidim
 Q_pls$outer
 ```
 
-
-<table>
-<thead><tr><th></th><th scope=col>name</th><th scope=col>block</th><th scope=col>weight</th><th scope=col>loading</th><th scope=col>communality</th><th scope=col>redundancy</th></tr></thead>
-<tbody>
-	<tr><th scope=row>1</th><td>Copas_A          </td><td>Hieght.Canopies  </td><td>0.35856854885461 </td><td>0.887519839594922</td><td>0.787691465674596</td><td>0                </td></tr>
-	<tr><th scope=row>2</th><td>Cobertura_       </td><td>Hieght.Canopies  </td><td>0.345898960229866</td><td>0.94614604741216 </td><td>0.895192343033654</td><td>0                </td></tr>
-	<tr><th scope=row>3</th><td>Promedio_A       </td><td>Hieght.Canopies  </td><td>0.270903422885627</td><td>0.672115038550411</td><td>0.451738625045621</td><td>0                </td></tr>
-	<tr><th scope=row>4</th><td>STD_A            </td><td>Hieght.Canopies  </td><td>0.218305257714878</td><td>0.789784461903717</td><td>0.623759496264543</td><td>0                </td></tr>
-	<tr><th scope=row>5</th><td>Copas_B          </td><td>Midle1.Canopies  </td><td>0.404997431054494</td><td>0.88395131534034 </td><td>0.781369927891918</td><td>0                </td></tr>
-	<tr><th scope=row>6</th><td>Cobertura_B      </td><td>Midle1.Canopies  </td><td>0.438210882193238</td><td>0.993479294561978</td><td>0.987001108723365</td><td>0                </td></tr>
-	<tr><th scope=row>7</th><td>Promedio_B       </td><td>Midle1.Canopies  </td><td>0.290485615251922</td><td>0.711389959258348</td><td>0.506075674133594</td><td>0                </td></tr>
-	<tr><th scope=row>8</th><td>Copas_C          </td><td>Midle2.Canopies  </td><td>0.270958947201145</td><td>0.47408348163835 </td><td>0.22475514756234 </td><td>0                </td></tr>
-	<tr><th scope=row>9</th><td>Cobertura_C      </td><td>Midle2.Canopies  </td><td>0.801763112396802</td><td>0.994483529540894</td><td>0.988997490528114</td><td>0                </td></tr>
-	<tr><th scope=row>10</th><td>Promedio_C        </td><td>Midle2.Canopies   </td><td>0.299211312373236 </td><td>0.247994063022574 </td><td>0.0615010552944445</td><td>0                 </td></tr>
-	<tr><th scope=row>11</th><td>Copas_D           </td><td>Low.Canopies      </td><td>0.494974793440597 </td><td>-0.899995291539908</td><td>0.809991524794004 </td><td>0                 </td></tr>
-	<tr><th scope=row>12</th><td>Cobertura_D       </td><td>Low.Canopies      </td><td>0.316671472295785 </td><td>-0.633299211530968</td><td>0.401067891325746 </td><td>0                 </td></tr>
-	<tr><th scope=row>13</th><td>Promedio_D        </td><td>Low.Canopies      </td><td>-0.308728520402696</td><td>0.494577822579864 </td><td>0.24460722258784  </td><td>0                 </td></tr>
-	<tr><th scope=row>14</th><td>STD_D             </td><td>Low.Canopies      </td><td>-0.309271229265038</td><td>0.650842769443926 </td><td>0.423596310537439 </td><td>0                 </td></tr>
-	<tr><th scope=row>15</th><td>Copas_total       </td><td>OBIA              </td><td>0.0863176644997283</td><td>0.664623343022256 </td><td>0.44172418809008  </td><td>0.376227117644485 </td></tr>
-	<tr><th scope=row>16</th><td>Copas_altas      </td><td>OBIA             </td><td>0.09698718892714 </td><td>0.644419737978339</td><td>0.415276798696071</td><td>0.35370123984741 </td></tr>
-	<tr><th scope=row>17</th><td>Copas_medianas   </td><td>OBIA             </td><td>0.122581200028031</td><td>0.751267044129976</td><td>0.564402171595791</td><td>0.480714907485369</td></tr>
-	<tr><th scope=row>18</th><td>Copas_bajas       </td><td>OBIA              </td><td>-0.119995171869195</td><td>-0.638208075216374</td><td>0.407309547271389 </td><td>0.346915340139229 </td></tr>
-	<tr><th scope=row>19</th><td>Cobertura_total    </td><td>OBIA               </td><td>-0.0131657669756342</td><td>-0.054653848646225 </td><td>0.00298704317184447</td><td>0.00254413652936187</td></tr>
-	<tr><th scope=row>20</th><td>Cobertura_altas   </td><td>OBIA              </td><td>0.0889292849401984</td><td>0.596910325699595 </td><td>0.356301936926796 </td><td>0.303470931308337 </td></tr>
-	<tr><th scope=row>21</th><td>Cobertua_medianas</td><td>OBIA             </td><td>0.125814729420881</td><td>0.764992398968243</td><td>0.585213370479187</td><td>0.49844030623358 </td></tr>
-	<tr><th scope=row>22</th><td>Cobertura_bajas   </td><td>OBIA              </td><td>-0.150301978583175</td><td>-0.944939696940639</td><td>0.892911030854267 </td><td>0.760513805919906 </td></tr>
-	<tr><th scope=row>23</th><td>Promedio_altas    </td><td>OBIA              </td><td>0.0800682487984746</td><td>0.525795325211123 </td><td>0.276460724013871 </td><td>0.235468249514186 </td></tr>
-	<tr><th scope=row>24</th><td>Promedio_bajas     </td><td>OBIA               </td><td>-0.0913180299276499</td><td>-0.727023045119911 </td><td>0.528562508135427  </td><td>0.450189403914143  </td></tr>
-	<tr><th scope=row>25</th><td>Promedio_medianas </td><td>OBIA              </td><td>0.0803774673359316</td><td>0.522294767578688 </td><td>0.272791824240075 </td><td>0.23234335931338  </td></tr>
-	<tr><th scope=row>26</th><td>Promedio_total     </td><td>OBIA               </td><td>-0.0880800169956293</td><td>-0.668607588568929 </td><td>0.447036107491959  </td><td>0.380751407188985  </td></tr>
-	<tr><th scope=row>27</th><td>STD_altas        </td><td>OBIA             </td><td>0.085509619662947</td><td>0.585501029239287</td><td>0.342811455240264</td><td>0.29198076351267 </td></tr>
-	<tr><th scope=row>28</th><td>STD_bajas          </td><td>OBIA               </td><td>-0.0853530675068772</td><td>-0.6949127835221   </td><td>0.482903776702433  </td><td>0.411300763931321  </td></tr>
-	<tr><th scope=row>29</th><td>STD_medianas      </td><td>OBIA              </td><td>0.0946053283582827</td><td>0.58648254767977  </td><td>0.343961778732954 </td><td>0.29296052170496  </td></tr>
-	<tr><th scope=row>30</th><td>STD_total          </td><td>OBIA               </td><td>-0.0740587591672799</td><td>-0.609744395066354 </td><td>0.371788227314834  </td><td>0.31666097738865   </td></tr>
-	<tr><th scope=row>31</th><td>D_Elev_CURT_mean_CUBE</td><td>Topography           </td><td>-0.00310653422277474 </td><td>0.140659883360907    </td><td>0.0197852027871039   </td><td>0                    </td></tr>
-	<tr><th scope=row>32</th><td>DTM_1_mean       </td><td>Topography       </td><td>0.742779839742295</td><td>0.864597803566728</td><td>0.74752936193241 </td><td>0                </td></tr>
-	<tr><th scope=row>33</th><td>slope_1m_std      </td><td>Topography        </td><td>-0.517380027867904</td><td>-0.69239461801966 </td><td>0.479410307062591 </td><td>0                 </td></tr>
-	<tr><th scope=row>34</th><td>A_RICH           </td><td>Richness         </td><td>0.360473747384202</td><td>0.820645863738968</td><td>0.673459633671877</td><td>0.475106420059154</td></tr>
-	<tr><th scope=row>35</th><td>AR_RICH          </td><td>Richness         </td><td>0.389306082369274</td><td>0.899932533266213</td><td>0.809878564430943</td><td>0.571346055785882</td></tr>
-	<tr><th scope=row>36</th><td>H_RICH           </td><td>Richness         </td><td>0.412764595728446</td><td>0.857218630090367</td><td>0.734823779774005</td><td>0.518397061868836</td></tr>
-</tbody>
-</table>
+name | block | weight | loading | communality | redundancy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Copas_A | Hieght.Canopies | 0.35856854885461 | 0.887519839594922 | 0.787691465674596 | 0 |
+| 2 | Cobertura_ | Hieght.Canopies | 0.345898960229866 | 0.94614604741216 | 0.895192343033654 | 0 |
+| 3 | Promedio_A | Hieght.Canopies | 0.270903422885627 | 0.672115038550411 | 0.451738625045621 | 0 |
+| 4 | STD_A | Hieght.Canopies | 0.218305257714878 | 0.789784461903717 | 0.623759496264543 | 0 |
+| 5 | Copas_B | Midle1.Canopies | 0.404997431054494 | 0.88395131534034 | 0.781369927891918 | 0 |
+| 6 | Cobertura_B | Midle1.Canopies | 0.438210882193238 | 0.993479294561978 | 0.987001108723365 | 0 |
+| 7 | Promedio_B | Midle1.Canopies | 0.290485615251922 | 0.711389959258348 | 0.506075674133594 | 0 |
+| 8 | Copas_C | Midle2.Canopies | 0.270958947201145 | 0.47408348163835 | 0.22475514756234 | 0 |
+| 9 | Cobertura_C | Midle2.Canopies | 0.801763112396802 | 0.994483529540894 | 0.988997490528114 | 0 |
+| 10 | Promedio_C | Midle2.Canopies | 0.299211312373236 | 0.247994063022574 | 0.0615010552944445 | 0 |
+| 11 | Copas_D | Low.Canopies | 0.494974793440597 | -0.899995291539908 | 0.809991524794004 | 0 |
+| 12 | Cobertura_D | Low.Canopies | 0.316671472295785 | -0.633299211530968 | 0.401067891325746 | 0 |
+| 13 | Promedio_D | Low.Canopies | -0.308728520402696 | 0.494577822579864 | 0.24460722258784 | 0 |
+| 14 | STD_D | Low.Canopies | -0.309271229265038 | 0.650842769443926 | 0.423596310537439 | 0 |
+| 15 | Copas_total | OBIA | 0.0863176644997283 | 0.664623343022256 | 0.44172418809008 | 0.376227117644485 |
+| 16 | Copas_altas | OBIA | 0.09698718892714 | 0.644419737978339 | 0.415276798696071 | 0.35370123984741 |
+| 17 | Copas_medianas | OBIA | 0.122581200028031 | 0.751267044129976 | 0.564402171595791 | 0.480714907485369 |
+| 18 | Copas_bajas | OBIA | -0.119995171869195 | -0.638208075216374 | 0.407309547271389 | 0.346915340139229 |
+| 19 | Cobertura_total | OBIA | -0.0131657669756342 | -0.054653848646225 | 0.00298704317184447 | 0.00254413652936187 |
+| 20 | Cobertura_altas | OBIA | 0.0889292849401984 | 0.596910325699595 | 0.356301936926796 | 0.303470931308337 |
+| 21 | Cobertua_medianas | OBIA | 0.125814729420881 | 0.764992398968243 | 0.585213370479187 | 0.49844030623358 |
+| 22 | Cobertura_bajas | OBIA | -0.150301978583175 | -0.944939696940639 | 0.892911030854267 | 0.760513805919906 |
+| 23 | Promedio_altas | OBIA | 0.0800682487984746 | 0.525795325211123 | 0.276460724013871 | 0.235468249514186 |
+| 24 | Promedio_bajas | OBIA | -0.0913180299276499 | -0.727023045119911 | 0.528562508135427 | 0.450189403914143 |
+| 25 | Promedio_medianas | OBIA | 0.0803774673359316 | 0.522294767578688 | 0.272791824240075 | 0.23234335931338 |
+| 26 | Promedio_total | OBIA | -0.0880800169956293 | -0.668607588568929 | 0.447036107491959 | 0.380751407188985 |
+| 27 | STD_altas | OBIA | 0.085509619662947 | 0.585501029239287 | 0.342811455240264 | 0.29198076351267 |
+| 28 | STD_bajas | OBIA | -0.0853530675068772 | -0.6949127835221 | 0.482903776702433 | 0.411300763931321 |
+| 29 | STD_medianas | OBIA | 0.0946053283582827 | 0.58648254767977 | 0.343961778732954 | 0.29296052170496 |
+| 30 | STD_total | OBIA | -0.0740587591672799 | -0.609744395066354 | 0.371788227314834 | 0.31666097738865 |
+| 31 | D_Elev_CURT_mean_CUBE | Topography | -0.00310653422277474 | 0.140659883360907 | 0.0197852027871039 | 0 |
+| 32 | DTM_1_mean | Topography | 0.742779839742295 | 0.864597803566728 | 0.74752936193241 | 0 |
+| 33 | slope_1m_std | Topography | -0.517380027867904 | -0.69239461801966 | 0.479410307062591 | 0 |
+| 34 | A_RICH | Richness | 0.360473747384202 | 0.820645863738968 | 0.673459633671877 | 0.475106420059154 |
+| 35 | AR_RICH | Richness | 0.389306082369274 | 0.899932533266213 | 0.809878564430943 | 0.571346055785882 |
+| 36 | H_RICH | Richness | 0.412764595728446 | 0.857218630090367 | 0.734823779774005 | 0.518397061868836 |
 
 
 
