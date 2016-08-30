@@ -2,7 +2,7 @@
 layout: page
 title: Tags
 #description:
-header-img: "img/bot_garden.PNG" 
+header-img: "img/BotGar_NDVI.png" 
 ---
 
 <!-- Get the tag name for every tag on the site and set them
