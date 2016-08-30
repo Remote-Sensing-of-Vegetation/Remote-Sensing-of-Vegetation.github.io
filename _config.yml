@@ -1,0 +1,24 @@
+# Site settings
+title: Remote Sensing of Vegetation
+header-img: img/Peatland.PNG
+email: javierlopatin@gmail.com
+#copyright_name: Remote-Sensing-of-Vegetation.github.io
+description: "Remote Sensing of Vegetation. Tips, Tutorials and Scripts for Remote Sensing and Vegetation Sciences"
+url: "http://Remote-Sensing-of-Vegetation.github.io"
+#twitter_username: SBootstrap
+github_username:  Remote-Sensing-of-Vegetation
+#facebook_username:  StartBootstrap
+email_username:  javierlopatin@gmail.com
+
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
