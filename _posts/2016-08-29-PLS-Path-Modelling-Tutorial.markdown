@@ -674,10 +674,7 @@ text(x=pusr[1]+0.02*(pusr[2]-pusr[1]), y=pusr[4]-0.02*(pusr[4]-pusr[3]), txt, ad
 ![alt text](/img/PLS-Path-Modelling-Tutorial-Figures/output_24_0.png)
 
 
-```R
-
-```
-
+#### Elaborate the path diagram
 
 ```R
 library(pathdiagram)
