@@ -675,11 +675,6 @@ text(x=pusr[1]+0.02*(pusr[2]-pusr[1]), y=pusr[4]-0.02*(pusr[4]-pusr[3]), txt, ad
 
 
 ```R
-
-```
-
-
-```R
 library(pathdiagram)
 
 ## open plot window
