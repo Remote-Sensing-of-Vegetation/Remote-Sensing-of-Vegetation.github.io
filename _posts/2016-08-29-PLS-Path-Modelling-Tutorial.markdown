@@ -5,6 +5,9 @@ subtitle:   "Path analysis to model Remote Sensing data"
 date:       2016-08-29 12:00:00
 author:     "Javier Lopatin"
 header-img: "img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
+tags:
+- LiDAR
+- PLS-PM
 ---
 
 This is a tutorial about PLS Path Modeling applied to Geocience. The sample data is part of the analysis of [THIS](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6990570) paper.
@@ -16,9 +19,9 @@ library(plspm)
 
 ## set working directory
 setwd("C:/Users/Lopatin/Dropbox/Publicaciones/OBIA-PLSPM")
- 
+
 ## Load data
-datapls <- read.table("datapls.txt", header=T, sep="", dec=".") 
+datapls <- read.table("datapls.txt", header=T, sep="", dec=".")
 ```
 
 
@@ -57,9 +60,9 @@ Q_modes = rep("A",7)
 
 
 ```R
-# define list of indicators: what variables are associated with what latent variable: 
+# define list of indicators: what variables are associated with what latent variable:
 # in the same orther than Q_inner: Hieght.Canopies, Midle1.Canopies, Midle2.Canopies, Low.Canopies, OBIA, Topography, Richness
-Q_outer = list(80:83, 123:126, 166:168, 209:212, 25:40, 252:254, c(6,7,8)) 
+Q_outer = list(80:83, 123:126, 166:168, 209:212, 25:40, 252:254, c(6,7,8))
 ```
 
 
@@ -137,13 +140,13 @@ name | block | weight | loading | communality | redundancy |
 
 
 ```R
-# plotting the loadings 
+# plotting the loadings
 plot(Q_pls, what = "loadings")
 ```
 ![alt text](/img/PLS-Path-Modelling-Tutorial-Figures/output_10_0.png)
 
 ```R
-# Another measure of block construction is the "crossloadings". 
+# Another measure of block construction is the "crossloadings".
 # This gives you the correlation of the variables with all Latent Variables.
 # The idea is to find if there are any "traitor" indicators. That means that the R should be higher within his own block or LV
 Q_pls$crossloading
@@ -191,7 +194,7 @@ Q_pls$crossloading
 
 ```R
 # now you can eliminate all variables with loading below 0.7
-# Also, internally is not possible to have negative loading. 
+# Also, internally is not possible to have negative loading.
 # The proposed solution is to invert the scale of the ill-fated manifest variables:
 datapls$NCobertura_bajas = -1 * datapls$Cobertura_bajas # new variable NÂ° 255
 datapls$Nslope_1m_std    = -1 * datapls$slope_1m_std    # new variable NÂ° 256
@@ -210,32 +213,32 @@ Q_outer = list (c(80,81,83), c(123,124), c(167), c(209,210), c(27,31,255), c(252
 
 ```R
 # run PLSPM
-Q_pls = plspm(datapls, Q_inner, Q_outer, Q_modes, maxiter= 1000, boot.val = T, 
+Q_pls = plspm(datapls, Q_inner, Q_outer, Q_modes, maxiter= 1000, boot.val = T,
               br = 1000, scheme = "factor", scaled = T)
 summary(Q_pls)
-# check again for the indicators of model quality. This time use bootstrap validation. 
+# check again for the indicators of model quality. This time use bootstrap validation.
 # With summary yo have all information
 ```
 
 
-    PARTIAL LEAST SQUARES PATH MODELING (PLS-PM) 
-    
-    ---------------------------------------------------------- 
-    MODEL SPECIFICATION 
-    1   Number of Cases      78 
-    2   Latent Variables     7 
-    3   Manifest Variables   16 
-    4   Scale of Data        Standardized Data 
-    5   Non-Metric PLS       FALSE 
-    6   Weighting Scheme     factorial 
-    7   Tolerance Crit       1e-06 
-    8   Max Num Iters        1000 
-    9   Convergence Iters    4 
-    10  Bootstrapping        TRUE 
-    11  Bootstrap samples    1000 
-    
-    ---------------------------------------------------------- 
-    BLOCKS DEFINITION 
+    PARTIAL LEAST SQUARES PATH MODELING (PLS-PM)
+
+    ----------------------------------------------------------
+    MODEL SPECIFICATION
+    1   Number of Cases      78
+    2   Latent Variables     7
+    3   Manifest Variables   16
+    4   Scale of Data        Standardized Data
+    5   Non-Metric PLS       FALSE
+    6   Weighting Scheme     factorial
+    7   Tolerance Crit       1e-06
+    8   Max Num Iters        1000
+    9   Convergence Iters    4
+    10  Bootstrapping        TRUE
+    11  Bootstrap samples    1000
+
+    ----------------------------------------------------------
+    BLOCKS DEFINITION
                   Block         Type   Size   Mode
     1   Hieght.Canopies    Exogenous      3      A
     2   Midle1.Canopies    Exogenous      2      A
@@ -244,9 +247,9 @@ summary(Q_pls)
     5              OBIA   Endogenous      3      A
     6        Topography    Exogenous      2      A
     7          Richness   Endogenous      3      A
-    
-    ---------------------------------------------------------- 
-    BLOCKS UNIDIMENSIONALITY 
+
+    ----------------------------------------------------------
+    BLOCKS UNIDIMENSIONALITY
                      Mode  MVs  C.alpha  DG.rho  eig.1st  eig.2nd
     Hieght.Canopies     A    3    0.876   0.926     2.42    0.537
     Midle1.Canopies     A    2    0.940   0.971     1.89    0.112
@@ -255,9 +258,9 @@ summary(Q_pls)
     OBIA                A    3    0.948   0.966     2.72    0.193
     Topography          A    2    0.382   0.764     1.24    0.764
     Richness            A    3    0.823   0.895     2.22    0.495
-    
-    ---------------------------------------------------------- 
-    OUTER MODEL 
+
+    ----------------------------------------------------------
+    OUTER MODEL
                            weight  loading  communality  redundancy
     Hieght.Canopies                                                
       1 Copas_A             0.376    0.918        0.842       0.000
@@ -282,9 +285,9 @@ summary(Q_pls)
       7 A_RICH              0.352    0.817        0.667       0.471
       7 AR_RICH             0.396    0.902        0.813       0.574
       7 H_RICH              0.414    0.859        0.737       0.520
-    
-    ---------------------------------------------------------- 
-    CROSSLOADINGS 
+
+    ----------------------------------------------------------
+    CROSSLOADINGS
                            Hieght.Canopies  Midle1.Canopies  Midle2.Canopies
     Hieght.Canopies                                                         
       1 Copas_A                     0.9178            0.422          -0.0481
@@ -333,9 +336,9 @@ summary(Q_pls)
       7 A_RICH                   0.0238  -0.385     -0.6949    0.8169
       7 AR_RICH                  0.1955  -0.607     -0.6489    0.9019
       7 H_RICH                   0.1431  -0.582     -0.7175    0.8585
-    
-    ---------------------------------------------------------- 
-    INNER MODEL 
+
+    ----------------------------------------------------------
+    INNER MODEL
     $OBIA
                        Estimate   Std. Error     t value   Pr(>|t|)
     Intercept          8.04e-17       0.0498    1.61e-15   1.00e+00
@@ -343,15 +346,15 @@ summary(Q_pls)
     Midle1.Canopies    8.44e-01       0.0602    1.40e+01   2.04e-22
     Midle2.Canopies    7.20e-02       0.0558    1.29e+00   2.01e-01
     Low.Canopies      -2.23e-01       0.0585   -3.81e+00   2.83e-04
-    
+
     $Richness
                   Estimate   Std. Error     t value   Pr(>|t|)
     Intercept    -2.08e-16       0.0626   -3.32e-15   1.00e+00
     OBIA         -2.99e-01       0.0717   -4.17e+00   8.06e-05
     Topography   -6.53e-01       0.0717   -9.10e+00   9.53e-14
-    
-    ---------------------------------------------------------- 
-    CORRELATIONS BETWEEN LVs 
+
+    ----------------------------------------------------------
+    CORRELATIONS BETWEEN LVs
                      Hieght.Canopies  Midle1.Canopies  Midle2.Canopies
     Hieght.Canopies            1.000            0.460           -0.082
     Midle1.Canopies            0.460            1.000            0.169
@@ -368,9 +371,9 @@ summary(Q_pls)
     OBIA                  -0.4719   1.000      0.4870    -0.617
     Topography            -0.0233   0.487      1.0000    -0.798
     Richness               0.1450  -0.617     -0.7984     1.000
-    
-    ---------------------------------------------------------- 
-    SUMMARY INNER MODEL 
+
+    ----------------------------------------------------------
+    SUMMARY INNER MODEL
                            Type     R2  Block_Communality  Mean_Redundancy    AVE
     Hieght.Canopies   Exogenous  0.000              0.805            0.000  0.805
     Midle1.Canopies   Exogenous  0.000              0.944            0.000  0.944
@@ -379,13 +382,13 @@ summary(Q_pls)
     OBIA             Endogenous  0.819              0.905            0.742  0.905
     Topography        Exogenous  0.000              0.614            0.000  0.614
     Richness         Endogenous  0.706              0.739            0.522  0.739
-    
-    ---------------------------------------------------------- 
-    GOODNESS-OF-FIT 
+
+    ----------------------------------------------------------
+    GOODNESS-OF-FIT
     [1]  0.7918
-    
-    ---------------------------------------------------------- 
-    TOTAL EFFECTS 
+
+    ----------------------------------------------------------
+    TOTAL EFFECTS
                              relationships  direct  indirect    total
     1   Hieght.Canopies -> Midle1.Canopies   0.000    0.0000   0.0000
     2   Hieght.Canopies -> Midle2.Canopies   0.000    0.0000   0.0000
@@ -408,10 +411,10 @@ summary(Q_pls)
     19                  OBIA -> Topography   0.000    0.0000   0.0000
     20                    OBIA -> Richness  -0.299    0.0000  -0.2991
     21              Topography -> Richness  -0.653    0.0000  -0.6528
-    
-    --------------------------------------------------------- 
-    BOOTSTRAP VALIDATION 
-    weights 
+
+    ---------------------------------------------------------
+    BOOTSTRAP VALIDATION
+    weights
                                  Original  Mean.Boot  Std.Error  perc.025  perc.975
     Hieght.Canopies-Copas_A         0.376      0.366   1.19e-01     0.250     0.492
     Hieght.Canopies-Cobertura_      0.351      0.346   1.14e-01     0.174     0.451
@@ -429,8 +432,8 @@ summary(Q_pls)
     Richness-A_RICH                 0.352      0.352   2.30e-02     0.304     0.395
     Richness-AR_RICH                0.396      0.395   2.36e-02     0.353     0.441
     Richness-H_RICH                 0.414      0.414   2.65e-02     0.367     0.470
-    
-    loadings 
+
+    loadings
                                  Original  Mean.Boot  Std.Error  perc.025  perc.975
     Hieght.Canopies-Copas_A         0.918      0.912   7.04e-02     0.795     0.967
     Hieght.Canopies-Cobertura_      0.955      0.945   7.12e-02     0.869     0.983
@@ -448,8 +451,8 @@ summary(Q_pls)
     Richness-A_RICH                 0.817      0.815   5.07e-02     0.695     0.891
     Richness-AR_RICH                0.902      0.900   2.25e-02     0.850     0.936
     Richness-H_RICH                 0.859      0.860   2.75e-02     0.802     0.906
-    
-    paths 
+
+    paths
                              Original  Mean.Boot  Std.Error  perc.025  perc.975
     Hieght.Canopies -> OBIA    -0.125    -0.1190     0.0643   -0.2433   0.00849
     Midle1.Canopies -> OBIA     0.844     0.8427     0.0553    0.7259   0.94304
@@ -457,13 +460,13 @@ summary(Q_pls)
     Low.Canopies -> OBIA       -0.223    -0.2274     0.0616   -0.3554  -0.10893
     OBIA -> Richness           -0.299    -0.3011     0.0696   -0.4369  -0.16835
     Topography -> Richness     -0.653    -0.6548     0.0599   -0.7607  -0.53075
-    
-    rsq 
+
+    rsq
               Original  Mean.Boot  Std.Error  perc.025  perc.975
     OBIA         0.819      0.824     0.0323     0.755     0.880
     Richness     0.706      0.716     0.0450     0.615     0.795
-    
-    total.efs 
+
+    total.efs
                                         Original  Mean.Boot  Std.Error  perc.025
     Hieght.Canopies -> Midle1.Canopies    0.0000     0.0000     0.0000   0.00000
     Hieght.Canopies -> Midle2.Canopies    0.0000     0.0000     0.0000   0.00000
@@ -508,7 +511,7 @@ summary(Q_pls)
     OBIA -> Topography                   0.00000
     OBIA -> Richness                    -0.16835
     Topography -> Richness              -0.53075
-    
+
 
 
 
@@ -556,7 +559,7 @@ pairs(Scores, pch = 16, col = "blue", panel=panel.smooth, upper.panel=panel.cor)
 
 #### Predict Richness!
 
-Simulate the PLS-PM interactions. All variables are linear relationships. 
+Simulate the PLS-PM interactions. All variables are linear relationships.
 See: Lopatin, J., Galleguillos, M., Fassnacht, F. E., Ceballos, A., & Hernández, J. (2015). Using a Multistructural Object-Based LiDAR Approach to Estimate Vascular Plant Richness in Mediterranean Forests With Complex Structure. IEEE Geoscience and Remote Sensing Letters, 12(5), 1008-1012.
 
 #### Create the outer model
@@ -599,8 +602,8 @@ summary(Rich)
 ```
 
 
-       Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-      2.217   6.128   8.436   9.226  12.130  19.120 
+       Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      2.217   6.128   8.436   9.226  12.130  19.120
 
 
 
@@ -636,13 +639,13 @@ summary(Predicted)
 ```
 
 
-       Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-      2.217   6.128   8.436   9.226  12.130  19.120 
+       Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      2.217   6.128   8.436   9.226  12.130  19.120
 
 
 
-       Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-      3.627   6.576   8.279   9.226  11.770  16.280 
+       Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      3.627   6.576   8.279   9.226  11.770  16.280
 
 
 
@@ -663,7 +666,7 @@ abline(lm1, lty=2, lwd=2)
 
 txt1 = paste("r^2 =", round(R2,2))
 txt2 = paste("RMSE =",round(RMSE,2), "")
-txt = paste(txt1, txt2, sep="\n") 
+txt = paste(txt1, txt2, sep="\n")
 pusr = par()$usr
 text(x=pusr[1]+0.02*(pusr[2]-pusr[1]), y=pusr[4]-0.02*(pusr[4]-pusr[3]), txt, adj=c(0,1), cex=1.5)
 
@@ -690,10 +693,10 @@ text(0.62,0.66,"-0.575*", pos=3, cex=1, col="blue")
 LV3 = latent("OBIA", x=0.45, y=0.10, rx=0.12, ry=0.08,  cex= 1)
 text(0.62,0.3,"-0.395*", cex=1, col="blue")
 
-LV3.1= latent("HC", x=0.1, y=0.7, rx=0.1, ry=0.08, cex=1) 
-LV3.2= latent("MHC", x=0.1, y=0.5, rx=0.1, ry=0.08, cex=1) 
-LV3.3= latent("MLC", x=0.1, y=0.3, rx=0.1, ry=0.08, cex=1) 
-LV3.4= latent("LC",  x=0.1, y=0.1, rx=0.1, ry=0.08, cex=1) 
+LV3.1= latent("HC", x=0.1, y=0.7, rx=0.1, ry=0.08, cex=1)
+LV3.2= latent("MHC", x=0.1, y=0.5, rx=0.1, ry=0.08, cex=1)
+LV3.3= latent("MLC", x=0.1, y=0.3, rx=0.1, ry=0.08, cex=1)
+LV3.4= latent("LC",  x=0.1, y=0.1, rx=0.1, ry=0.08, cex=1)
 text(0.27,0.6,"-0.125", cex=1, pos=3, col="blue")
 text(0.27,0.45,"0.844*", cex=1, pos=3, col="blue")
 text(0.27,0.25,"0.072", cex=1, pos=3, col="blue")
@@ -718,7 +721,7 @@ arrow(from =LV3.2 , to = LV3, start = "east", end = "west", lwd = 2, col = "gray
 arrow(from =LV3.3 , to = LV3, start = "east", end = "west", lwd = 2, col = "gray80", length=0.2)
 arrow(from =LV3.4 , to = LV3, start = "east", end = "west", lwd = 2, col = "gray80", length=0.2)
 
-## TEXT R2 
+## TEXT R2
 text(0.75,0.46,substitute(R^2 == "0.660*"), col="white", cex=1)
 text(0.75,0.93, "Godness-of-Fit = 0.820", cex=1, col="red")
 text(0.45,0.06,substitute(R^2 == "0.819*"), col="white", cex=1)
