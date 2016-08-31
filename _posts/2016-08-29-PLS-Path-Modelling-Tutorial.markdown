@@ -5,7 +5,7 @@ subtitle:   "Path analysis to model Remote Sensing data"
 date:       2016-08-29 12:00:00
 author:     "Javier Lopatin"
 header-img: "img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
-tags: R LiDAR PLS-PM
+tags: R LiDAR Path-Analysis
 ---
 
 This is a tutorial about PLS Path Modeling applied to Geocience. The sample data is part of the analysis of [THIS](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6990570) paper.
