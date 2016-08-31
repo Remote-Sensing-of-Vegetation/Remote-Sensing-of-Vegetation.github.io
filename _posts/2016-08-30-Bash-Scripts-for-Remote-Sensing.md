@@ -4,7 +4,7 @@ title:      "Bash Scripts for Remote Sensing"
 subtitle:   "Learn GNU/Linux command lines programming for Remote Sensing purposes"
 date:       2016-08-30 12:00:00
 author:     "Javier Lopatin"
-header-img: "img/"
+header-img: "img/unix_terminal.png"
 tags: Bash GDAL
 ---
 
