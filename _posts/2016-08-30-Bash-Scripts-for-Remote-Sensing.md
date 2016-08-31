@@ -5,7 +5,9 @@ subtitle:   "Learn GNU/Linux command lines programming for Remote Sensing purpos
 date:       2016-08-30 12:00:00
 author:     "Javier Lopatin"
 header-img: "img/unix_terminal.png"
-tags: Bash GDAL
+tags: 
+- Bash 
+- GDAL
 ---
 
 In this short tutorial you will find some simple tools to process raster images
