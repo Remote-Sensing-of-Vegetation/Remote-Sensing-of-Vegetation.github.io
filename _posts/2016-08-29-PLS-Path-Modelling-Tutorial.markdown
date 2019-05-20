@@ -5,9 +5,9 @@ subtitle:   "Path analysis to model Remote Sensing data"
 date:       2016-08-29 12:00:00
 author:     "Javier Lopatin"
 header-img: "img/PLS-Path-Modelling-Tutorial-Figures/output_4_0.png"
-tags: 
-- R 
-- LiDAR 
+tags:
+- R
+- LiDAR
 - Path Analysis
 ---
 
@@ -19,7 +19,7 @@ See more information on PLS-PM [HERE](http://gastonsanchez.com/PLS_Path_Modeling
 library(plspm)
 
 ## set working directory
-setwd("C:/Users/Lopatin/Dropbox/Publicaciones/OBIA-PLSPM")
+setwd("your/path")
 
 ## Load data
 datapls <- read.table("datapls.txt", header=T, sep="", dec=".")
@@ -263,26 +263,26 @@ summary(Q_pls)
     ----------------------------------------------------------
     OUTER MODEL
                            weight  loading  communality  redundancy
-    Hieght.Canopies                                                
+    Hieght.Canopies
       1 Copas_A             0.376    0.918        0.842       0.000
       1 Cobertura_          0.351    0.955        0.913       0.000
       1 STD_A               0.393    0.812        0.660       0.000
-    Midle1.Canopies                                                
+    Midle1.Canopies
       2 Copas_B             0.504    0.970        0.941       0.000
       2 Cobertura_B         0.526    0.973        0.946       0.000
-    Midle2.Canopies                                                
+    Midle2.Canopies
       3 Cobertura_C         1.000    1.000        1.000       0.000
-    Low.Canopies                                                   
+    Low.Canopies
       4 Copas_D             0.602    0.978        0.957       0.000
       4 Cobertura_D         0.430    0.957        0.915       0.000
-    OBIA                                                           
+    OBIA
       5 Copas_medianas      0.331    0.933        0.870       0.713
       5 Cobertua_medianas   0.338    0.968        0.936       0.767
       5 NCobertura_bajas    0.382    0.954        0.910       0.745
-    Topography                                                     
+    Topography
       6 DTM_1_mean          0.742    0.864        0.747       0.000
       6 Nslope_1m_std       0.518    0.693        0.480       0.000
-    Richness                                                       
+    Richness
       7 A_RICH              0.352    0.817        0.667       0.471
       7 AR_RICH             0.396    0.902        0.813       0.574
       7 H_RICH              0.414    0.859        0.737       0.520
@@ -290,50 +290,50 @@ summary(Q_pls)
     ----------------------------------------------------------
     CROSSLOADINGS
                            Hieght.Canopies  Midle1.Canopies  Midle2.Canopies
-    Hieght.Canopies                                                         
+    Hieght.Canopies
       1 Copas_A                     0.9178            0.422          -0.0481
       1 Cobertura_                  0.9554            0.418          -0.1120
       1 STD_A                       0.8124            0.393          -0.0626
-    Midle1.Canopies                                                         
+    Midle1.Canopies
       2 Copas_B                     0.4259            0.970           0.2117
       2 Cobertura_B                 0.4673            0.973           0.1193
-    Midle2.Canopies                                                         
+    Midle2.Canopies
       3 Cobertura_C                -0.0820            0.169           1.0000
-    Low.Canopies                                                            
+    Low.Canopies
       4 Copas_D                     0.1250           -0.294          -0.4566
       4 Cobertura_D                 0.2010           -0.131          -0.3903
-    OBIA                                                                    
+    OBIA
       5 Copas_medianas              0.1707            0.781           0.3128
       5 Cobertua_medianas           0.0867            0.774           0.3398
       5 NCobertura_bajas            0.3545            0.866           0.2767
-    Topography                                                              
+    Topography
       6 DTM_1_mean                  0.4257            0.562           0.0779
       6 Nslope_1m_std               0.1133            0.352           0.2941
-    Richness                                                                
+    Richness
       7 A_RICH                     -0.3679           -0.504          -0.1191
       7 AR_RICH                    -0.2806           -0.639          -0.2569
       7 H_RICH                     -0.3263           -0.567          -0.1169
                            Low.Canopies    OBIA  Topography  Richness
-    Hieght.Canopies                                                  
+    Hieght.Canopies
       1 Copas_A                  0.0678   0.199      0.3604   -0.3473
       1 Cobertura_               0.1177   0.185      0.3425   -0.3293
       1 STD_A                    0.2413   0.207      0.3021   -0.3291
-    Midle1.Canopies                                                  
+    Midle1.Canopies
       2 Copas_B                 -0.2497   0.808      0.5660   -0.6218
       2 Cobertura_B             -0.2039   0.844      0.5970   -0.6697
-    Midle2.Canopies                                                  
+    Midle2.Canopies
       3 Cobertura_C             -0.4426   0.324      0.2101   -0.1921
-    Low.Canopies                                                     
+    Low.Canopies
       4 Copas_D                  0.9781  -0.519     -0.0641    0.1827
       4 Cobertura_D              0.9567  -0.371      0.0355    0.0816
-    OBIA                                                             
+    OBIA
       5 Copas_medianas          -0.3624   0.933      0.4384   -0.5673
       5 Cobertua_medianas       -0.4719   0.968      0.4471   -0.5574
       5 NCobertura_bajas        -0.5039   0.954      0.4995   -0.6307
-    Topography                                                       
+    Topography
       6 DTM_1_mean               0.1323   0.380      0.8642   -0.7237
       6 Nslope_1m_std           -0.2347   0.395      0.6929   -0.5050
-    Richness                                                         
+    Richness
       7 A_RICH                   0.0238  -0.385     -0.6949    0.8169
       7 AR_RICH                  0.1955  -0.607     -0.6489    0.9019
       7 H_RICH                   0.1431  -0.582     -0.7175    0.8585
@@ -700,7 +700,7 @@ text(0.27,0.45,"0.844*", cex=1, pos=3, col="blue")
 text(0.27,0.25,"0.072", cex=1, pos=3, col="blue")
 text(0.27,0.1,"-0.223*", cex=1, pos=3, col="blue")
 
-LV4 = latent("Richness", x=0.75, y=0.5, rx=0.12, ry=0.08, cex=1)          
+LV4 = latent("Richness", x=0.75, y=0.5, rx=0.12, ry=0.08, cex=1)
 
 draw(LV1)
 draw(LV3)
